@@ -5,14 +5,19 @@
 #include <stdarg.h>
 
 /**
- * print_buffer - results if buffer is presesnt
- * @buffer: character arrays
- * @buff_ind: length of the chars.
+ * print_char -result of a char
+ * @types: result or arg.
+ * @buffer: handles printing
+ * @flags:  total flags
+ * @width: width
+ * @precision: Precision specification
+ * @size: specifies the size
+ * Return: total characters
  */
-void print_buffer(char buffer[], int *buff_ind)
+int print_char(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
+	char c = va_arg(types, int);
 
-	*buff_ind = 0;
+	return (handle_write_char(c, buffer, flags, width, precision, size));
 }

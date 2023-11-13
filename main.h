@@ -12,5 +12,6 @@ int print37(void);
 int print_int(va_list args);
 int print_dec(va_list args);
 int print_char(va_list, typeof, charbuffer[]);
+void print_buffer(char buffer[], int *buff_ind);
 
 #endif
