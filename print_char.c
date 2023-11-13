@@ -1,20 +1,18 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <stdarg.h>
 
 /**
- * print_char - this functn is cnvsn specifier c
- * @types: first arg
- * @charbuffer: second Arg
- * Return: 0
+ * print_buffer - results if buffer is presesnt
+ * @buffer: character arrays
+ * @buff_ind: length of the chars.
  */
+void print_buffer(char buffer[], int *buff_ind)
+{
+	if (*buff_ind > 0)
+		write(1, &buffer[0], *buff_ind);
 
-int print_char(va_list, types, charbuffer[];
-	int flags
-	int width;
-	int precision;
-	int length;
-
-	char c= va_arg(types, int);
-
-	return (handle_write_char(c, flags, width, precision, size));
+	*buff_ind = 0;
 }
-
