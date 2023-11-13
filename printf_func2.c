@@ -4,7 +4,7 @@
  * printf_rot13 – this functn prnts rot13
  *
  *
- * @arg: va_list r13
+ * @args: va_list r13
  *
  *
  * Return: R13 Int
@@ -40,14 +40,14 @@ int printf_rot13(va_list args)
 			count++;
 		}
 	}
-	return(count);
+	return (count);
 }
 
 /**
  *  printf_unsigned – this functn prnts unsigned int
  *
  *
- *  @arg: va_list un int
+ *  @args: va_list un int
  *
  *
  *  Return: un Int
@@ -86,7 +86,7 @@ int printf_unsigned(va_list args)
  * printf_octal – this functn prnts octal.
  *
  *
- * @arg: va_list oct.
+ * @args: va_list oct.
  *
  *
  * Return: Oct Int
@@ -112,7 +112,7 @@ int printf_octal(va_list args)
 		getOctal /= 8;
 		m++;
 	}
- 	for (m = m - 1; m >= 0; m--)
+	for (m = m - 1; m >= 0; m--)
 	{
 		_putchar(octal[m]);
 		k++;

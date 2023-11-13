@@ -4,7 +4,7 @@
 * printf_binary -  this functn changs to hexD uppcase
 *
 *
-* @arg: va_list hexD
+* @args: va_list hexD
 *
 *
 * Return: HexD
@@ -47,7 +47,7 @@ int printf_binary(va_list args)
 * printf_hex – this functn chngs to hexD lwrcase.
 *
 *
-* @arg: va_list hexD
+* @args: va_list hexD
 *
 *
 * Return: HexD val
@@ -93,10 +93,10 @@ int printf_hex(va_list args)
 }
 
 /**
-* print f_heX – this funcn chngs to hexD uppcase.
+* printf_heX – this funcn chngs to hexD uppcase.
 *
 *
-* @arg: va_list hexD
+* @args: va_list hexD
 *
 *
 * Return: HexD
@@ -111,7 +111,7 @@ int printf_heX(va_list args)
 	int k = 0;
 	int x = 0;
 	int p = 0;
-	
+
 	char hex_array[48];
 
 	while (hex_convert != 0)
@@ -145,7 +145,7 @@ int printf_heX(va_list args)
 /**
  * printf_reverse – this functn shws the ptr of val.
  *
- * @arg: val for str ptr.
+ * @args: val for str ptr.
  *
  *
  * Return: r string
@@ -155,7 +155,7 @@ int printf_reverse(va_list args)
 {
 	int i = 0;
 	int lgth = 0;
-	
+
 	char *ptr = va_arg(arg, char*);
 
 	if (ptr == NULL)
