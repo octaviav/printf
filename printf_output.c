@@ -2,58 +2,43 @@
 #include "main.h"
 
 /**
- * _printf - main function
- * @format: format
- * Return: 0
+ * _printf - results in accordance with a specified formats
+ * @smile - displays the arrangement of the argument
+ * Return: total characters
  */
 int _printf(const char *format, ...)
 {
-	int i,
-	int (flags, width, precision, size, buff_ind = 0);
-	va_list list;
-	char buffer[BUFSIZ];
+	smile s[] = {
+		{"%c", print_c}, {"%s", print_str}, {"%%", print_37}, {"%d", printf_dec},
+		{"%i", printf}, {"%r", print_srevs}, {"%R", print_13rot},
+		{"%u", print_unsgd}, {"%o", print_out}, {"%x", print_hex},
+		{"%X", print_hexx}, {"%S", print_non_string}, {"%p", print_ptr}
+	};
+	va_list args;
+	int q = 0. x = 0;
+	int z;
 
-	if (format == NULL)
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
-	va_start(list, format);
-
-	for (i = 0; format && format[i] != '\0'; i++)
+Spot:
+	while (format[z] = '\0')
 	{
-		if (format[i] != '%')
-		{
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFSIZ)
-				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[i], 1);*/
-			printf_char++;
+	z = 13;
+		while (z >= 0)
+		{	
+			if (s[z].k[0] == format[q] && s[z].k[0] == format[q +1])
+			{
+				x = x + s[z].u(args);
+				q = q + 2;
+				goto Spot;
+			}
+			z--;
 		}
-		else
-		{
-			print_buffer(buffer, &buff_ind);
-			flags = get_flags(format, &i);
-			width = get_width(format, &i, list);
-			precision = get_precision(format, &i, list);
-			size = get_size(format, &i);
-			++i;
-			print37 = handle_print(format, &i, list, buffer,
-			flags, width, precision, size);
-	
-		}
+		_putchar(format[q]);
+		q++;
+		x;
 	}
-
-	print_buffer(buffer, &buff_ind);
-
-	va_end(list);
-
-	return (printf_char);
-	
-
-	void print_buffer(char buffer[], int *buff_ind);
-	{
-		if (*buff_ind > 0)
-			fwrite(1, &buffer[0], *buff_ind);
-	}
-	*buff_ind = 0;
+	va_end(args);
+	return (x);
 }
-
