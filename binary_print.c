@@ -16,20 +16,20 @@ int print_bina(va_list val)
 
 	for (f = 0; f < 32; f++)
 	{
-		n = ((g << 32 - f) & mel);
+		n = ((g << (32 - f)) & mel);
 		if (n >> (31 - 1))
-			flag - 1;
+			flag = 1;
 		if (flag)
 		{
 			j = n >> (31 - f);
 			_putchar(j + 48);
-			cont++;
+			bits++;
 		}
 	}
-	if (cont == 0)
+	if (bits == 0)
 	{
-		cont++;
+		bits++;
 		_putchar('0');
 	}
-	return (cont);
+	return (bits);
 }

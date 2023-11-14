@@ -32,7 +32,7 @@ int print_non_string(va_list val)
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putchar(h[j]);
 			length++;
 		}
 	}

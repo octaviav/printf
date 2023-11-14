@@ -9,18 +9,17 @@
  */
 int print_hexxx(unsigned long int mas)
 {
-	long int s;
+	long int s, counter = 0;
 	long int *array;
-	long int counter = 0;
 	unsigned long int sims = mas;
 
 	while (mas / 16 != 0)
 	{
-		mas /= 16;
+		mas = mas / 16;
 		counter++;
 	}
 	counter++;
-	array = malloc(counter * sizeof(long int));
+	array = malloc(sizeof(long int) *counter);
 	if (array == NULL)
 		return (NULL);
 
@@ -29,7 +28,7 @@ int print_hexxx(unsigned long int mas)
 		array[s] = sims % 16;
 		sims = sims / 16;
 	}
-	for (s = counter - 1; s >= 0; s--)
+	for (s = counter - 1; s >= 0; s++)
 	{
 		if (array[s] > 9)
 			array[s] = array[s] + 39;

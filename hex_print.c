@@ -14,7 +14,7 @@ int print_hex(va_list val)
 	int *array;
 	int counter = 0;
 	unsigned int mas = va_arg(val, unsigned int);
-	unsigned int mas = mas;
+	unsigned int sim = mas;
 
 	while (mas / 16 != 0)
 	{

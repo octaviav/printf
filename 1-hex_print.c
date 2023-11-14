@@ -30,7 +30,7 @@ int print_hexx(va_list val)
 		sim /= 16;
 	}
 	for (c = counter - 1; c >= 0; c--)
-i	{
+	{
 		if (array[c] > 9)
 			array[c] = array[c] + 7;
 		_putchar(array[c] + '0');
