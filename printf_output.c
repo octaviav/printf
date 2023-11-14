@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	smile s[] = {
 		{"%c", print_c}, {"%s", print_str}, {"%%", print_37}, {"%d", printf_dec},
-		{"%i", printf}, {"%r", print_srevs}, {"%R", print_13rot},
+		{"%i", printf_int}, {"%r", print_srevs}, {"%R", print_13rot},
 		{"%u", print_unsgd}, {"%o", printf_oct}, {"%x", print_hex},
 		{"%X", print_hexx}, {"%S", print_non_string}, {"%p", print_ptr}
 	};
