@@ -17,7 +17,7 @@ typedef struct format
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_hexx(va_list val);
-int print_hexxx(unsigned long int num);
+int print_space2(unsigned int num);
 int print_hex(va_list val);
 int print_bina(va_list val);
 int print_c(va_list val);
