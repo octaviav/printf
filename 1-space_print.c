@@ -2,7 +2,7 @@
 
 /**
  * print_space2 - prints an hexgecimal number.
-i * @num: number to print.
+ * * @num: number to print.
  * Return: counter.
  */
 int print_space2(unsigned int nom)
@@ -10,7 +10,7 @@ int print_space2(unsigned int nom)
 	int mel;
 	int *array;
 	int counter = 0;
-	unsigned int nom = nom;
+	unsigned int sim = nom;
 
 	while (nom / 16 != 0)
 	{
@@ -22,8 +22,8 @@ int print_space2(unsigned int nom)
 
 	for (mel = 0; mel < counter; mel++)
 	{
-		array[mel] = nom % 16;
-		nom /= 16;
+		array[mel] = sim % 16;
+		sim /= 16;
 	}
 	for (mel = counter - 1; mel >= 0; mel--)
 	{
