@@ -2,19 +2,19 @@
 
 /**
  * print_space2 - prints an hexgecimal number.
- * @num: number to print.
+i * @num: number to print.
  * Return: counter.
  */
-int print_space2(unsigned int num)
+int print_space2(unsigned int nom)
 {
 	int mel;
 	int *array;
 	int counter = 0;
-	unsigned int nom = num;
+	unsigned int nom = nom;
 
-	while (num / 16 != 0)
+	while (nom / 16 != 0)
 	{
-		num /= 16;
+		nom /= 16;
 		counter++;
 	}
 	counter++;
