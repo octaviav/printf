@@ -14,7 +14,7 @@ typedef struct format
 	int (*u)();
 } smile;
 
-int _printf(const char *format, ...);
+int _printf(const char *smile, ...);
 int _putchar(char c);
 int print_hexx(va_list val);
 int print_space2(unsigned int num);

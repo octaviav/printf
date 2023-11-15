@@ -28,7 +28,7 @@ int print_non_string(va_list val)
 				_putchar('0');
 				length++;
 			}
-			length = length + print_space(value);
+			length = length + print_space2(value);
 		}
 		else
 		{
