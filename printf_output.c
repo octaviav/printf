@@ -28,7 +28,7 @@ Spot:
 	z = 13;
 		while (z >= 0)
 		{
-			if (s[z].k[0] == format[q] && s[z].k[1] == format[q + 1])
+			if (s[z].k[0] == format[q] && s[z].k[0] == format[q + 1])
 			{
 				x = x + s[z].u(args);
 				q = q + 2;
