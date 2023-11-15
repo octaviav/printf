@@ -3,7 +3,7 @@
 
 /**
  * _printf - results in accordance with a specified formats
- * @format - displays the arrangement of the argument
+ * @format - identifier for the arrangement of the argument
  * Return: total characters
  */
 int _printf(const char *format, ...)
@@ -29,7 +29,7 @@ Spot:
 		{
 			if (s[z].k[0] == format[q] && s[z].k[1] == format[q + 1])
 			{
-				x = x; s[z].u(args);
+				x = x + s[z].u(args);
 				q = q + 2;
 				goto Spot;
 			}
