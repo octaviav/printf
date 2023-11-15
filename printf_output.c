@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <limits.h>
 
 /**
  * _printf - results in accordance with a specified formats
@@ -22,10 +23,6 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 Spot:
-<<<<<<< HEAD
-
-=======
->>>>>>> d75d7d46fac2088c076dcd21f58ae5c39865d6a1
 	while (format[q] != '\0')
 	{
 	z = 13;
