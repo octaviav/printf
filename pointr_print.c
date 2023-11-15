@@ -26,7 +26,7 @@ int print_ptr(va_list val)
 
 	d = (unsigned long int)p;
 	_putchar('0');
-	_putchar('d');
+	_putchar('x');
 	a = print_space(d);
 	return (a + 2);
 }
