@@ -27,7 +27,7 @@ int print_hexx(va_list val)
 	for (c = 0; c < counter; c++)
 	{
 		array[c] = sim % 16;
-		sim /= 16;
+		sim = sim / 16;
 	}
 	for (c = counter - 1; c >= 0; c--)
 	{

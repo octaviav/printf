@@ -28,7 +28,11 @@ int print_non_string(va_list val)
 				_putchar('0');
 				length++;
 			}
+<<<<<<< HEAD
 			length = length + print_space(value);
+=======
+			length = length + print_space2(value);
+>>>>>>> d75d7d46fac2088c076dcd21f58ae5c39865d6a1
 		}
 		else
 		{

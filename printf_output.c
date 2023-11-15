@@ -3,7 +3,7 @@
 
 /**
  * _printf - results in accordance with a specified formats
- * @smile - displays the arrangement of the argument
+ * @format - identifier for the arrangement of the argument
  * Return: total characters
  */
 int _printf(const char *format, ...)
@@ -22,13 +22,16 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 Spot:
+<<<<<<< HEAD
 
+=======
+>>>>>>> d75d7d46fac2088c076dcd21f58ae5c39865d6a1
 	while (format[q] != '\0')
 	{
 	z = 13;
 		while (z >= 0)
-		{	
-			if (s[z].k[0] == format[q] && s[z].k[0] == format[q + 1])
+		{
+			if (s[z].k[0] == format[q] && s[z].k[1] == format[q + 1])
 			{
 				x = x + s[z].u(args);
 				q = q + 2;
